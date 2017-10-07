@@ -1,3 +1,53 @@
+0.22.0 / 2017-10-02
+===================
+* [ENHANCEMENT] Added `forever` option to `ClientSSLSecurity` in order to allow `keep-alive` connections. (#974)
+* [ENHANCEMENT] Added `preserveWhitespace` option to prevent the client from trimming resolved `String` values. (#972)
+* [MAINTENANCE] Removed `compres` dependency in favor of `zlib`. (#971)
+* [MAINTENANCE] (Security) Updated `debug` dependency to avoid possible vulnerability. (#973)
+* [FIX] Updated `.travis.yml` to test against latest `node.js 4.8.x` release to avoid Travis CI error. 
+* [FIX] Fix performance bug at POJO to XML conversion. (#968)
+* [ENHANCEMENT] Added possibility to override the `bluebird.js` suffix (default: "async"). (#961) 
+* [DOC] Updated the `Security` section by listing all available optional methods. (#966)
+
+0.21.0 / 2017-08-28
+===================
+* [DOC] Removed issues from Contributing Readme (#963)
+* [DOC] Add server option details to readme.md (#965)
+* [DOC] Added details to clientSSLSecurity (#960)
+* [ENHANCEMENT] Added 'useEmptyTag' wsdlOption, which if set, creates <Tag /> instead of <Tag></Tag> if no body is present (#962)
+* [ENHANCEMENT] Add typescript support (#955)
+* [FIX] `path.resolve` cannot resolve a null path (#959)
+* [MAINTENANCE] Updated minimum node version to 4.0.0 (#964)
+* [MAINTENANCE] Update `uuid` library to latest release (`3.1.0`) and use their newly introduced "modules" instead of the outdated/deprecated direct method calls.
+* [MAINTENANCE] Fixed JSHint indentation errors in `test/client-test.js`.
+
+0.20.0 / 2017-08-08
+===================
+* [ENHANCEMENT] Added `bluebird.js` promise library in order to provide `[methodName]Asyc` in `Client` (#956)
+* [ENHANCEMENT] Added `option` to handle `nilAsNull` in `SOAP` responses (#952)
+* [ENHANCEMENT] Added `option` to return a `SOAP Fault` instead of `stack` (error) on bad request (#951)
+* [MAINTENANCE] Removed uneccessary variable declaration in `http.js` (#948)
+* [ENHANCEMENT] Added possibiltiy to alter `XML` before it is sent (#943)
+* [FIX] Updated vulnerable module `finalhandler` to version `^1.0.3` (#946)
+* [ENHANCEMENT] Added possibility to submit `XML`-Strings to SOAP Client API (#918)
+
+0.19.2 / 2017-06-12
+===================
+* [FIX] Recursive types cause infinite loop (#940)
+* [DOC] Adding a note about consulting in the README. (#939)
+* [MAINTENANCE] Add yarn.lock to gitignore (#938)
+* [MAINTENANCE] Remove dependency to ursa (#928)
+
+0.19.1 / 2017-05-30
+===================
+* [FIX] Reverting #914.  It broke existing behavior and prevented array type arguments. (#937)
+* [FIX] Add test for accepting array as parameter based on wsdl (#933)
+* [DOC] readme.md clarifications, examples and typos (#930)
+* [MAINTENANCE] Fix build by satisfying jshint indentation (#931)
+* [MAINTENANCE] Drop `travis-ci` test support for `node.js` < `4.x` (LTS) (#932)
+* [DOC] Update CONTRIBUTING.md
+* [DOC] typo in server example (#925)
+
 0.19.0 / 2017-03-16
 ===================
 
